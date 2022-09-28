@@ -9,6 +9,8 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
+    
+    
     lazy var backView: UILabel = {
         let authorlbl = UILabel()
         authorlbl.translatesAutoresizingMaskIntoConstraints = false
@@ -16,7 +18,7 @@ class PostTableViewCell: UITableViewCell {
       return authorlbl
     }()
     
-      lazy var postAuthor: UILabel = {
+     lazy var postAuthor: UILabel = {
        let postaut = UILabel()
         let font: UIFont = UIFont.boldSystemFont(ofSize: 20)
         postaut.translatesAutoresizingMaskIntoConstraints = false
@@ -124,5 +126,6 @@ class PostTableViewCell: UITableViewCell {
             views.heightAnchor.constraint(equalToConstant: 20)
             
         ])
+        
     }
 }
