@@ -6,16 +6,16 @@
 //
 
 import UIKit
+import StorageService
+//import Foundation
 
-struct Post {
-    var author: String?
-    var description: String?
-    var image: String?
-    var lokes: Int?
-    var views: Int?
-   
-}
-
+//public struct Post {
+//    var author: String?
+//    var description: String?
+//    var image: String?
+//    var lokes: Int?
+//    var views: Int?
+//}
 
 class ProfileViewController: UIViewController {
    
@@ -26,13 +26,21 @@ class ProfileViewController: UIViewController {
     }()
     
     var tableView = UITableView(frame: .zero, style: .grouped)
-    var postData = [Post]()
-  
+     
+    public var postData = [Post]()
+   
+ 
       
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-        postData.append(Post(author: "Elon Musk", description: "Ну классный самолет. Ветерок на посадке только слишком сильно дунул", image: "A330-300.jpg", lokes: 12, views: 33))
+        
+        #if DEBUG
+        view.backgroundColor = .red
+        #else
+        view.backgroundColor = .yellow
+        #endif
+        
+          postData.append(Post(author: "Elon Musk", description: "Ну классный самолет. Ветерок на посадке только слишком сильно дунул", image: "A330-300.jpg", lokes: 12, views: 33))
         postData.append(Post(author: "Юрий Шевчук", description: "Всюду черти! надави брат, на педаль.", image: "Brothers.tiff", lokes: 50, views: 55))
         postData.append(Post(author: "Cергей Крокодилов", description: "Как тебе такое, Илон Маск?", image: "Boston.jpg", lokes: 132, views: 4567))
         postData.append(Post(author: "Donald Trump", description: "Wow!!! Wonderfull Kukuruznik", image: "Aeroplan.jpeg", lokes: 243, views: 427))
