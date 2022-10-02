@@ -30,9 +30,11 @@
 		04E3F4D028C8AD9800053F83 /* Brothers.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 04E3F4CF28C8AD9800053F83 /* Brothers.tiff */; };
 		04E4847628C665C500BE7076 /* Boston.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04E4847528C665C500BE7076 /* Boston.jpg */; };
 		04E89F4D28D32E8300B84715 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E89F4C28D32E8300B84715 /* PhotosViewController.swift */; };
+		04ED761028E963DE002CB0FB /* iOSIntPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 04ED760F28E963DE002CB0FB /* iOSIntPackage */; };
 		04EDAC5E288AE5C700E8F6D9 /* A330-300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04EDAC5D288AE5C700E8F6D9 /* A330-300.jpg */; };
 		04F35C1B28D495E60086448D /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F35C1A28D495E60086448D /* PhotosCollectionViewCell.swift */; };
 		04F35C1D28D4C4A60086448D /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F35C1C28D4C4A60086448D /* arrow.png */; };
+		152B8F53AA1412F5387AE648 /* Pods_NavigTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FDD07FB63240F5B811C057 /* Pods_NavigTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		041CD90828E8841000C24C62 /* iOSIntPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = iOSIntPackage; path = "../Dependencies libruary/iOSIntPackage"; sourceTree = "<group>"; };
 		0423FE7028AA3E9600CB2D8B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0423FE7628AA439900CB2D8B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		0424520628D22F1D00097C50 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
@@ -87,6 +90,9 @@
 		04EDAC5D288AE5C700E8F6D9 /* A330-300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "A330-300.jpg"; sourceTree = "<group>"; };
 		04F35C1A28D495E60086448D /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		04F35C1C28D4C4A60086448D /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		3764F0A02C1FA8E23EF27ECF /* Pods-NavigTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigTest.release.xcconfig"; path = "Target Support Files/Pods-NavigTest/Pods-NavigTest.release.xcconfig"; sourceTree = "<group>"; };
+		5746E03BEE0C2D889F4BBE60 /* Pods-NavigTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigTest.debug.xcconfig"; path = "Target Support Files/Pods-NavigTest/Pods-NavigTest.debug.xcconfig"; sourceTree = "<group>"; };
+		B5FDD07FB63240F5B811C057 /* Pods_NavigTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NavigTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +107,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04ED761028E963DE002CB0FB /* iOSIntPackage in Frameworks */,
 				0465F8D628E5D0A4005A4890 /* StorageService.framework in Frameworks */,
+				152B8F53AA1412F5387AE648 /* Pods_NavigTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041CD90728E8841000C24C62 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				041CD90828E8841000C24C62 /* iOSIntPackage */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		0465F8D128E5D0A4005A4890 /* StorageService */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,24 +131,6 @@
 				0465F8D228E5D0A4005A4890 /* StorageService.h */,
 			);
 			path = StorageService;
-			sourceTree = "<group>";
-		};
-		0465F8E028E5DBEE005A4890 /* Pictures */ = {
-			isa = PBXGroup;
-			children = (
-				0423FE7628AA439900CB2D8B /* logo.png */,
-				045CD34928C70E4D00665905 /* Aeroplan.jpeg */,
-				04B1A11C28E47DA9004E1488 /* cat.jpg */,
-				04B1A11A28E47D90004E1488 /* fox.jpeg */,
-				04B1A11E28E4ADEB004E1488 /* volf.jpeg */,
-				04E3F4CF28C8AD9800053F83 /* Brothers.tiff */,
-				04E3F4CD28C8955F00053F83 /* Avatarka1.jpg */,
-				04B1A12028E4AE03004E1488 /* helicopter.jpeg */,
-				04E4847528C665C500BE7076 /* Boston.jpg */,
-				04F35C1C28D4C4A60086448D /* arrow.png */,
-				04EDAC5D288AE5C700E8F6D9 /* A330-300.jpg */,
-			);
-			path = Pictures;
 			sourceTree = "<group>";
 		};
 		049C345828830E7A0046CC99 /* Profile */ = {
@@ -152,11 +150,13 @@
 		04C05DBC2877241F006747AC = {
 			isa = PBXGroup;
 			children = (
-				0465F8E028E5DBEE005A4890 /* Pictures */,
+				041CD90728E8841000C24C62 /* Packages */,
 				049C345828830E7A0046CC99 /* Profile */,
 				04C05DC72877241F006747AC /* NavigTest */,
 				0465F8D128E5D0A4005A4890 /* StorageService */,
 				04C05DC62877241F006747AC /* Products */,
+				CF2BBD562570F6F60D9E0B4B /* Pods */,
+				400B1368E8A9851E7C2B0959 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,10 +175,38 @@
 				04C05DC82877241F006747AC /* AppDelegate.swift */,
 				04C05DCA2877241F006747AC /* SceneDelegate.swift */,
 				04C05DD128772424006747AC /* Assets.xcassets */,
+				04F35C1C28D4C4A60086448D /* arrow.png */,
+				045CD34928C70E4D00665905 /* Aeroplan.jpeg */,
+				04E3F4CF28C8AD9800053F83 /* Brothers.tiff */,
+				04B1A12028E4AE03004E1488 /* helicopter.jpeg */,
+				04B1A11E28E4ADEB004E1488 /* volf.jpeg */,
+				0423FE7628AA439900CB2D8B /* logo.png */,
+				04E4847528C665C500BE7076 /* Boston.jpg */,
+				04B1A11C28E47DA9004E1488 /* cat.jpg */,
+				04B1A11A28E47D90004E1488 /* fox.jpeg */,
+				04E3F4CD28C8955F00053F83 /* Avatarka1.jpg */,
+				04EDAC5D288AE5C700E8F6D9 /* A330-300.jpg */,
 				04C05DD328772424006747AC /* LaunchScreen.storyboard */,
 				04C05DD628772424006747AC /* Info.plist */,
 			);
 			path = NavigTest;
+			sourceTree = "<group>";
+		};
+		400B1368E8A9851E7C2B0959 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5FDD07FB63240F5B811C057 /* Pods_NavigTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF2BBD562570F6F60D9E0B4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5746E03BEE0C2D889F4BBE60 /* Pods-NavigTest.debug.xcconfig */,
+				3764F0A02C1FA8E23EF27ECF /* Pods-NavigTest.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,10 +245,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04C05DD928772424006747AC /* Build configuration list for PBXNativeTarget "NavigTest" */;
 			buildPhases = (
+				FB77B2235312F8D4D2D9478E /* [CP] Check Pods Manifest.lock */,
 				04C05DC12877241F006747AC /* Sources */,
 				04C05DC22877241F006747AC /* Frameworks */,
 				04C05DC32877241F006747AC /* Resources */,
 				0465F8D828E5D0A4005A4890 /* Embed Frameworks */,
+				06AD61305A18AE1594323D97 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -228,6 +258,9 @@
 				0465F8D528E5D0A4005A4890 /* PBXTargetDependency */,
 			);
 			name = NavigTest;
+			packageProductDependencies = (
+				04ED760F28E963DE002CB0FB /* iOSIntPackage */,
+			);
 			productName = NavigTest;
 			productReference = 04C05DC52877241F006747AC /* NavigTest.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +293,9 @@
 				Base,
 			);
 			mainGroup = 04C05DBC2877241F006747AC;
+			packageReferences = (
+				04ED760E28E963DE002CB0FB /* XCRemoteSwiftPackageReference "iOSIntPackage" */,
+			);
 			productRefGroup = 04C05DC62877241F006747AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -299,6 +335,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06AD61305A18AE1594323D97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NavigTest/Pods-NavigTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NavigTest/Pods-NavigTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NavigTest/Pods-NavigTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB77B2235312F8D4D2D9478E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NavigTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0465F8CC28E5D0A4005A4890 /* Sources */ = {
@@ -526,6 +604,7 @@
 		};
 		04C05DDA28772424006747AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5746E03BEE0C2D889F4BBE60 /* Pods-NavigTest.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -547,12 +626,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		04C05DDB28772424006747AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3764F0A02C1FA8E23EF27ECF /* Pods-NavigTest.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -574,7 +654,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -609,6 +689,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04ED760E28E963DE002CB0FB /* XCRemoteSwiftPackageReference "iOSIntPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TrueMax/iOSIntPackage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04ED760F28E963DE002CB0FB /* iOSIntPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04ED760E28E963DE002CB0FB /* XCRemoteSwiftPackageReference "iOSIntPackage" */;
+			productName = iOSIntPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04C05DBD2877241F006747AC /* Project object */;
 }

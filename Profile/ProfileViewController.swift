@@ -7,15 +7,7 @@
 
 import UIKit
 import StorageService
-//import Foundation
-
-//public struct Post {
-//    var author: String?
-//    var description: String?
-//    var image: String?
-//    var lokes: Int?
-//    var views: Int?
-//}
+import iOSIntPackage
 
 class ProfileViewController: UIViewController {
    
@@ -89,6 +81,14 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         cell.postAuthor.text = thePost.author
         cell.postTxt.text = thePost.description
         cell.postImage.image = UIImage(named: "\(thePost.image ?? "No Data")")
+        //---------------
+        
+        let filter = ImageProcessor()
+        let img = thePost.image
+       
+        filter.processImage(sourceImage: img ?? "No data", filter: .monochrome(color: .white, intensity: 5.0), completion: <#(UIImage?) -> Void#>)  //как реализовывается completion?
+        //----------------
+        
         return cell
         
     }

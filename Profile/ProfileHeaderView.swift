@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SnapKit
 
 
 struct PicturesData {
@@ -93,35 +93,48 @@ class ProfileHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
       private  func setupConstrains() {
-             let safeArea = self.safeAreaLayoutGuide
-          NSLayoutConstraint.activate([
+         
+          profileView.snp.makeConstraints { (make) in    make.left.equalTo(16);
+              make.width.equalTo(100); make.top.equalTo(16); make.height.equalTo(100)}
           
-            profileView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16.0),
-            profileView.widthAnchor.constraint(equalToConstant: 100),
-            profileView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 16.0),
-            profileView.heightAnchor.constraint(equalToConstant: 100),
-            
-            status.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 137),
-            status.widthAnchor.constraint(equalToConstant: 250),
-            status.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 27),
-            status.heightAnchor.constraint(equalToConstant: 25),
-            
-            setStatus.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 137),
-            setStatus.widthAnchor.constraint(equalToConstant: 150),
-            setStatus.heightAnchor.constraint(equalToConstant: 25),
-            setStatus.bottomAnchor.constraint(equalTo: changeStatusButton.topAnchor, constant: -14),
-            
-            newStatus.bottomAnchor.constraint(equalTo: setStatus.topAnchor, constant: -11),
-            newStatus.heightAnchor.constraint(equalToConstant: 15),
-            newStatus.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 137),
-            newStatus.widthAnchor.constraint(equalTo: safeArea.widthAnchor, constant: -5),
-            
-            changeStatusButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
-            changeStatusButton.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16.0),
-            changeStatusButton.topAnchor.constraint(equalTo: profileView.bottomAnchor, constant: 16),
-            changeStatusButton.heightAnchor.constraint(equalToConstant: 50),
-            
-          ])
+          status.snp.makeConstraints { (make) in make.left.equalTo(137); make.width.equalTo(250); make.top.equalTo(safeAreaLayoutGuide).offset(27); make.height.equalTo(25)}
+          
+          setStatus.snp.makeConstraints {(make) in make.left.equalTo(safeAreaLayoutGuide).offset(137); make.width.equalTo(150); make.height.equalTo(25); make.bottom.equalTo(changeStatusButton.snp.top).offset(-14)}
+          
+          newStatus.snp.makeConstraints {(make) in make.bottom.equalTo(setStatus.snp.top).offset(-11); make.height.equalTo(15); make.left.equalTo(137); make.width.equalTo(safeAreaLayoutGuide).offset(-5)}
+        
+          changeStatusButton.snp.makeConstraints {(make) in make.left.equalTo(safeAreaLayoutGuide).offset(16); make.right.equalTo(safeAreaLayoutGuide).offset(-16); make.top.equalTo(profileView.snp.bottom).offset(16); make.height.equalTo(50)}
+     
+    
+          //             let safeArea = self.safeAreaLayoutGuide
+//          NSLayoutConstraint.activate([
+//
+//            profileView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16.0),
+//            profileView.widthAnchor.constraint(equalToConstant: 100),
+//            profileView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 16.0),
+//            profileView.heightAnchor.constraint(equalToConstant: 100),
+//
+//            status.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 137),
+//            status.widthAnchor.constraint(equalToConstant: 250),
+//            status.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 27),
+//            status.heightAnchor.constraint(equalToConstant: 25),
+//
+//            setStatus.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 137),
+//            setStatus.widthAnchor.constraint(equalToConstant: 150),
+//            setStatus.heightAnchor.constraint(equalToConstant: 25),
+//            setStatus.bottomAnchor.constraint(equalTo: changeStatusButton.topAnchor, constant: -14),
+//
+//            newStatus.bottomAnchor.constraint(equalTo: setStatus.topAnchor, constant: -11),
+//            newStatus.heightAnchor.constraint(equalToConstant: 15),
+//            newStatus.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 137),
+//            newStatus.widthAnchor.constraint(equalTo: safeArea.widthAnchor, constant: -5),
+//
+//            changeStatusButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 16),
+//            changeStatusButton.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -16.0),
+//            changeStatusButton.topAnchor.constraint(equalTo: profileView.bottomAnchor, constant: 16),
+//            changeStatusButton.heightAnchor.constraint(equalToConstant: 50),
+//
+//          ])
     }
 
     @objc func editingChanged(textField: UITextField) {

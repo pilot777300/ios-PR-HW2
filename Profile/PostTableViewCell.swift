@@ -7,11 +7,10 @@
 
 import UIKit
 import StorageService
+import iOSIntPackage
 
 class PostTableViewCell: UITableViewCell {
 
-    
-    
     lazy var backView: UILabel = {
         let authorlbl = UILabel()
         authorlbl.translatesAutoresizingMaskIntoConstraints = false
@@ -47,6 +46,8 @@ class PostTableViewCell: UITableViewCell {
         postImg.contentMode = .scaleAspectFit
         postImg.clipsToBounds = true
         postImg.backgroundColor = .black
+      //   let filter = ImageProcessor()
+     //    filter.processImage(sourceImage: <#T##UIImage#>, filter: <#T##ColorFilter#>, completion: <#T##(UIImage?) -> Void#>)
         return postImg
     }()
     
@@ -127,6 +128,10 @@ class PostTableViewCell: UITableViewCell {
             views.heightAnchor.constraint(equalToConstant: 20)
             
         ])
+        
+    }
+    
+    func applyFilter() {
         
     }
 }
