@@ -46,8 +46,6 @@ class PostTableViewCell: UITableViewCell {
         postImg.contentMode = .scaleAspectFit
         postImg.clipsToBounds = true
         postImg.backgroundColor = .black
-      //   let filter = ImageProcessor()
-     //    filter.processImage(sourceImage: <#T##UIImage#>, filter: <#T##ColorFilter#>, completion: <#T##(UIImage?) -> Void#>)
         return postImg
     }()
     
@@ -131,7 +129,5 @@ class PostTableViewCell: UITableViewCell {
         
     }
     
-    func applyFilter() {
-        
-    }
+    
 }

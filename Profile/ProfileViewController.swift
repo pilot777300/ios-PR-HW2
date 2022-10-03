@@ -81,12 +81,18 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         cell.postAuthor.text = thePost.author
         cell.postTxt.text = thePost.description
         cell.postImage.image = UIImage(named: "\(thePost.image ?? "No Data")")
-        //---------------
+        
+        //--------------- filter
         
         let filter = ImageProcessor()
-        let img = thePost.image
-       
-        filter.processImage(sourceImage: img ?? "No data", filter: .monochrome(color: .white, intensity: 5.0), completion: <#(UIImage?) -> Void#>)  //как реализовывается completion?
+     
+        if let image = cell.postImage.image 
+        
+        {
+            filter.processImage(sourceImage: image, filter: .monochrome(color: .black, intensity: 5.0), completion: {cell.postImage.image = $0} )
+            
+        }
+        
         //----------------
         
         return cell
